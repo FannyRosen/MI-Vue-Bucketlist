@@ -1,15 +1,14 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <Todos />
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
+import Todos from "./components/Todos.vue";
 
 @Options({
   components: {
-    HelloWorld,
+    Todos,
   },
 })
 export default class App extends Vue {}
@@ -17,11 +16,21 @@ export default class App extends Vue {}
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oleo Script Swash Caps", cursive;
   text-align: center;
-  color: #2c3e50;
+  color: rgb(214, 18, 126);
   margin-top: 60px;
+
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
 }
 </style>
