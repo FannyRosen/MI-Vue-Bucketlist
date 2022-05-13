@@ -38,13 +38,11 @@ export default class Todos extends Vue {
 
   mounted() {
     this.todos = JSON.parse(localStorage.getItem("todos") || "[]");
-    console.log("hej" + this.todos);
   }
 
   handleAddTask(t: ToDo) {
     this.todos.push(t);
     localStorage.setItem("todos", JSON.stringify(this.todos));
-    console.log(t);
   }
 
   handleDeleteTask(t: ToDo) {
@@ -57,7 +55,6 @@ export default class Todos extends Vue {
     t.isDone = !t.isDone;
     t.heartChecked = false;
     t.thumbChecked = false;
-    console.log(t.isDone);
     localStorage.setItem("todos", JSON.stringify(this.todos));
   }
 
